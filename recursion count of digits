@@ -1,4 +1,4 @@
-//Given an integer,find out the sum of its digits using recursion
+//Given an integer,find out the count of its digits using recursion
 
 
 import java.util.Scanner;
@@ -7,7 +7,7 @@ public class SOD {
         if (n>=0&&n<=9){
             return n;
         }
-        return sod(n/10)+n%10;
+        return sod(n/10)+1;
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
