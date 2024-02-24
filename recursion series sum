@@ -1,0 +1,29 @@
+//Given a number n. Find the sum of natural  number till n but with alternate sign.
+
+//That mean if n=5 then you have to return 1-2+3-4+5=3 as your answer.
+
+import java.util.Scanner;
+
+public class seriessum {
+    static int seriessum1(int n) {
+        if (n == 0) {
+            return 0;
+        }
+        if(n%2==0){
+            return seriessum1(n-1)-n;
+        }
+        else {
+            return seriessum1(n-1)+n;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.println(seriessum1(n));
+    }
+}
+
+//input:5
+
+//output:1-2+3-4+5=3
