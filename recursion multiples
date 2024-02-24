@@ -1,0 +1,28 @@
+// Given a number num and a value k.Print k multiples of num.
+
+import java.util.Scanner;
+
+public class multiples {
+    static void multiple(int n,int k){
+        if(k ==1){
+            System.out.println(n);
+            return;
+        }
+        multiple(n,k-1);
+        System.out.println(n*k);
+    }
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int n=sc.nextInt();
+        int k=sc.nextInt();
+        multiple(n,k);
+
+    }
+}
+//input:n=3 k=5
+//output:
+//3
+//6
+//9
+//13
+//15
